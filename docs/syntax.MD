@@ -1,7 +1,7 @@
-# Syntax Of Zeron Programing Language
+# Syntax Of Zerva Programing Language
 
 ## Import Syntax
-this is Import library syntax in zeron Programing Language
+this is Import library syntax in zerva Programing Language
 
 ### Example
 
@@ -13,7 +13,7 @@ load [str.io]
 ## Declaration the type of data
 
 ### Example
-this how you Declaration type of data in zeron Programing Language
+this how you Declaration type of data in zerva Programing Language
 
 ```zeron
 let str >> $Variable > "Example";
@@ -23,29 +23,29 @@ let bool >> true;
 ```
 
 ## Print function
-this is print syntax in zeron Programing Language
+this is print syntax in zerva Programing Language
 
 ### Example
 
 ```zeron
 load [std.io]
 
-func main{
+func main(){
     
-    let str >> $Example > "hello from Zeron";
+    let str >> $Example > "hello from Zerva";
     std.io.fprint("%s",$Example);
 }
 ```
 
 ## If,Elif,Else and Execption statment
-This how you create a If,Elif,Else and Execption statment in Zeron Programing Language
+This how you create a If,Elif,Else and Execption statment in Zerva Programing Language
 
 ### Example for string Variable
 
 ```zeron
 load [std.io]/
 
-func main{
+func main(){
     
     let str >> $Name >
 
@@ -71,7 +71,7 @@ func main{
 ```zeron
 load [std.io]
 
-func main{
+func main(){
     
     let int >> $age;
     std.io.read(int) >> $age;
@@ -91,4 +91,78 @@ func main{
 }
 ```
 
+## Loop function
+This how you using loop in Zerva Programing Language
 
+## For Statment
+in for statment you can using step. step is like a increment in C Programing Language
+### Example
+
+```zeron
+load [std.io]
+
+func main(){
+    
+    for(let int >> $i in 0 -> 10) {
+        std.io.fprint("%n",$i);
+    }
+}
+```
+## For Statment but using step
+
+### Example
+
+```zeron
+load [std.io]
+
+func main(){
+
+    for(let int >> $i in 0 -> 10 : +2) {
+        std.io.fprint("%n",$i);
+    }
+}
+```
+
+## While statment
+
+### Example
+
+```zeron
+load [std.io]
+
+func main(){
+    let int >> 1 > $i
+    while($i <= 5)
+        std.io.fprint("%n",$i)
+}
+```
+
+## Array
+this how you using Array in Zerva Programing Language
+### Example
+
+```zeron
+load [std.io]
+
+func main(){
+    
+    let arr <int> >> $Number -> {1,2,3,4,5}
+
+    for(let int >> $i in 0 -> 5 : +1)
+        std.io.fprint("%n",$Number[])
+}
+```
+
+## Pointer
+this how you use Pointer in Zerva Programing Language
+### Example
+
+```zeron
+load [std.io]
+
+func main(){
+    
+    let int >> 10 > $Num
+    let ptr<int> 
+}
+```
