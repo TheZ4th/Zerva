@@ -12,7 +12,7 @@ load [str.io]
 
 ## Declaration the type of data
 
-### Exqmple
+### Example
 this how you Declaration type of data in zeron Programing Language
 
 ```zeron
