@@ -23,7 +23,7 @@ let bool >> true;
 ```
 
 ## Print function
-this is print syntax in zerva Programing Language
+this is print function in zerva Programing Language
 
 ### Example
 
@@ -76,10 +76,10 @@ func main(){
     let int >> $age;
     std.io.read(int) >> $age;
 
-    if ($age >> 18 -> 30) {
+    if ($age => 18 -> 30) {
         fprint("You Are Young");
     }
-    else if ($age >> 31 -> 60 :! 61) {
+    else if ($age => 31 -> 60 :! 61) {
         std.io.fprint("You Are Adult");
     }
     else{
@@ -163,6 +163,9 @@ load [std.io]
 func main(){
     
     let int >> 10 > $Num
-    let ptr<int> 
-}
+    let ptr<int> >> &$Num
+
+    std.io.fprint("Data in Pointer is : %n",$Num)
+    std.io.fprint("Data address is : %a",&$Num)
+  }
 ```
