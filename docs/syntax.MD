@@ -16,7 +16,7 @@ load [str.io]
 this how you Declaration type of data in zerva Programing Language
 
 ```zeron
-let str >> $Variable > "Example";
+let str >> $Example > "Zerva";
 let int >> $Number > 16;
 let flt >> $Float > 3,14;
 let bool >> true;
@@ -131,9 +131,9 @@ func main(){
 load [std.io]
 
 func main(){
-    let int >> 1 > $i
+    let int >> 1 > $i;
     while($i <= 5)
-        std.io.fprint("%n",$i)
+        std.io.fprint("%n",$i);
 }
 ```
 
@@ -148,8 +148,8 @@ func main(){
     
     let arr <int> >> $Number -> {1,2,3,4,5}
 
-    for(let int >> $i in 0 -> 5 : +1)
-        std.io.fprint("%n",$Number[])
+    for(let int >> $i in 0 -> 5 : +1);
+        std.io.fprint("%n",$Number[]);
 }
 ```
 
@@ -162,10 +162,32 @@ load [std.io]
 
 func main(){
     
-    let int >> 10 > $Num
-    let ptr<int> >> &$Num
+    let int >> 10 > $Num;
+    let ptr<int> >> @$Num;
 
-    std.io.fprint("Data in Pointer is : %n",$Num)
-    std.io.fprint("Data address is : %a",&$Num)
+    std.io.fprint("Data in Pointer is : %n",$Num);
+    std.io.fprint("Data address is : %a",&$Num);
   }
 ```
+
+## Struct
+this how you use struct in Zerva Programing Language
+### Example
+```zeron
+load [std.io]
+
+func main(){
+    
+    struct People {
+        
+        let int >> $hp > 100;
+        pub let str >> $name > "Michael";
+
+        pub func ShowName(){
+            std.io.fprint("%s",$name);
+        }
+    }
+    ShowName($Name);
+}
+```
+
