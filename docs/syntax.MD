@@ -16,10 +16,10 @@ load [str.io]
 this how you Declaration type of data in zerva Programing Language
 
 ```zeron
-let str >> $Example > "Zerva";
-let int >> $Number > 16;
-let flt >> $Float > 3,14;
-let bool >> true;
+let str >> "Hello" > $msg;
+let int >> 16 > $num;
+let flt >> 3,14 > $float;
+let bool >> true > $bool;
 ```
 
 ## Print function
@@ -32,8 +32,8 @@ load [std.io]
 
 func main(){
     
-    let str >> $Example > "hello from Zerva";
-    std.io.fprint("%s",$Example);
+    let str >> "hello from Zerva" > $msg;
+    std.io.fprint("%s",$msg);
 }
 ```
 
@@ -47,9 +47,9 @@ load [std.io]/
 
 func main(){
     
-    let str >> $Name >
+    let str >> $Name;
 
-    std.io.read(str) >> $Name
+    std.io.read(str) >> $Name;
 
     if ($Name -> "Jhon") {
         std.io.fprint("Hello Jhon");
@@ -146,9 +146,9 @@ load [std.io]
 
 func main(){
     
-    let arr <int> >> $Number -> {1,2,3,4,5}
+    let arr <int> >> [1,2,3,4,5] > $Number
 
-    for(let int >> $i in 0 -> 5 : +1);
+    for(let int >> $i in 0 -> 5);
         std.io.fprint("%n",$Number[]);
 }
 ```
@@ -163,9 +163,9 @@ load [std.io]
 func main(){
     
     let int >> 10 > $Num;
-    let ptr<int> >> @$Num;
+    let ptr<int> >> &$Num > ^$ptr;
 
-    std.io.fprint("Data in Pointer is : %n",$Num);
+    std.io.fprint("Data in Pointer is : %n",^$ptr);
     std.io.fprint("Data address is : %a",&$Num);
   }
 ```
@@ -180,14 +180,9 @@ func main(){
     
     struct People {
         
-        let int >> $hp > 100;
-        pub let str >> $name > "Michael";
-
-        pub func ShowName(){
-            std.io.fprint("%s",$name);
+        let int >> $hp;
+        pub let str >> $name;
         }
     }
-    ShowName($Name);
 }
 ```
-
